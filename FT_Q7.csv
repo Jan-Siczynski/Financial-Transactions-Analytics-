@@ -1,0 +1,9 @@
+card_brand,card_type,total_credit_limit,total_cards
+Mastercard,Debit,40050847,2191
+Visa,Debit,25105900,1320
+Visa,Credit,9160700,811
+Mastercard,Credit,6967000,635
+Amex,Credit,4597400,402
+Discover,Credit,2260600,209
+Mastercard,Debit (Prepaid),24810,383
+Visa,Debit (Prepaid),12441,195
