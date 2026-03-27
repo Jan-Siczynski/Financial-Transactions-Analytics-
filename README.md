@@ -32,20 +32,75 @@ The project demonstrates proficiency in advanced SQL techniques including **JOIN
 
 ---
 
-## ❓ Business Questions
+## ❓ Business Questions & Results
 
-| # | Question | SQL Techniques |
-|---|----------|---------------|
-| Q1 | Which month generates the highest transaction volume? | `EXTRACT`, `GROUP BY` |
-| Q2 | Which merchant categories generate the highest total revenue? | `JOIN`, `GROUP BY` |
-| Q3 | Does a lower credit score correlate with higher fraud rate? | `CASE WHEN`, `JOIN` |
-| Q4 | Does credit score influence the assigned credit limit? | `CASE WHEN`, `JOIN`, `HAVING` |
-| Q5 | Which 100 customers have the highest debt-to-income ratio? | `CTE`, `NULLIF` |
-| Q6 | What is the share of each payment method in total transactions? | `CASE WHEN`, Window Function |
-| Q7 | What is the total credit limit by card brand and type? | `GROUP BY` |
-| Q8 | How is customer debt distributed across 4 US geographic regions? | `CTE`, `CASE WHEN`, `JOIN` |
-| Q9 | Does years until retirement influence average transaction amount? | `CTE`, `CASE WHEN`, `JOIN` |
-| Q10 | What % of annual income did customers spend in 2010? | `CTE`, `RANK()`, `JOIN` |
+### Q1: Which month generates the highest transaction volume?
+> Supports workforce planning and short-term staffing decisions during peak banking periods.
+
+![Q1 Chart](FT_Q1_CHART.png)
+
+---
+
+### Q2: Which merchant categories generate the highest total revenue?
+> Identifies key customer spending sectors to support product portfolio decisions and business partnerships.
+
+![Q2 Chart](FT_Q2_CHART.png)
+
+---
+
+### Q3: Does a lower credit score correlate with a higher fraud rate?
+> Evaluates the effectiveness of credit score as a transaction risk indicator in the credit scoring process.
+
+![Q3 Chart](FT_Q3_CHART.png)
+
+---
+
+### Q4: Does credit score influence the assigned credit limit?
+> Analyzes the bank's credit policy in the context of portfolio risk management.
+
+![Q4 Chart](FT_Q4_CHART.png)
+
+---
+
+### Q5: Which 100 customers have the highest debt-to-income ratio?
+> Identifies the TOP 100 high-risk customers for debt restructuring or collection actions.
+
+![Q5 Chart](FT_Q5_CHART.png)
+
+---
+
+### Q6: What is the share of each payment method (chip, swipe, online)?
+> Supports infrastructure investment decisions based on customer payment preferences.
+
+![Q6 Chart](FT_Q6_CHART.png)
+
+---
+
+### Q7: What is the total credit limit by card brand and type?
+> Analyzes card portfolio structure to assess risk exposure per brand.
+
+![Q7 Chart](FT_Q7_CHART.png)
+
+---
+
+### Q8: How is customer debt distributed across 4 US geographic regions?
+> Identifies regional debt concentration for targeted risk management strategies.
+
+![Q8 Chart](FT_Q8_CHART.png)
+
+---
+
+### Q9: Does years until retirement influence average transaction amount?
+> Behavioral segmentation by life stage supports personalized product offerings.
+
+![Q9 Chart](FT_Q9_CHART.png)
+
+---
+
+### Q10: What % of annual income did customers spend in 2010?
+> Analyzes customer spending propensity as a baseline for financial health assessment.
+
+![Q10 Chart](FT_Q10_CHART.png)
 
 ---
 
@@ -58,16 +113,15 @@ The project demonstrates proficiency in advanced SQL techniques including **JOIN
 
 ---
 
-## 📁 Project Structure
+## 📁 Repository Structure
 
 ```
-├── /sql
-│   └── queries.sql          # All 10 SQL queries with comments
-├── /images
-│   └── dashboard.png        # Power BI dashboard screenshots
-├── /data
-│   └── source.md            # Dataset source and description
-└── README.md
+├── Financial_transactions.sql       # All 10 SQL queries with comments
+├── FT_Q1.csv ... FT_Q10.csv         # Query results exported from DataGrip
+├── FT_Q1_CHART.png ... FT_Q10_CHART.png  # Power BI visualizations
+├── README.md
+├── LICENSE
+└── .gitignore
 ```
 
 ---
@@ -75,7 +129,8 @@ The project demonstrates proficiency in advanced SQL techniques including **JOIN
 ## 🚀 How to Run
 
 1. Download the dataset from [Kaggle](https://www.kaggle.com/datasets/computingvictor/transactions-fraud-datasets)
-2. Convert `train_fraud_labels.json` to CSV using the Python script:
+2. Convert `train_fraud_labels.json` to CSV using the following Python script:
+
 ```python
 import json, csv
 
@@ -88,15 +143,10 @@ with open('fraud_labels.csv', 'w', newline='') as f:
     for transaction_id, label in data['target'].items():
         writer.writerow([transaction_id, label])
 ```
+
 3. Import all CSV files into PostgreSQL using DataGrip
-4. Run queries from `/sql/queries.sql`
+4. Run queries from `Financial_transactions.sql`
 5. Connect Power BI to PostgreSQL and build visualizations
-
----
-
-## 📊 Power BI Dashboard
-
-> *Screenshots will be added after dashboard completion*
 
 ---
 
@@ -105,4 +155,3 @@ with open('fraud_labels.csv', 'w', newline='') as f:
 **Jan Siczyński**
 - GitHub: [Jan-Siczynski](https://github.com/Jan-Siczynski)
 - LinkedIn: [jan-siczyński](https://www.linkedin.com/in/jan-siczyński-1b245a387/)
-
