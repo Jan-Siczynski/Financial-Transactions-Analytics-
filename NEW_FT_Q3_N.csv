@@ -1,0 +1,5 @@
+credit_segment,total_transactions,fraud_count,fraud_rate_pct
+Poor,30152,73,0.24
+Excellent,2501425,3667,0.15
+Fair,1230879,1789,0.15
+Good,5152507,7803,0.15
